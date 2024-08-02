@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import type { Metadata } from "next";
 import { IBM_Plex_Serif, Inter } from "next/font/google";
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
